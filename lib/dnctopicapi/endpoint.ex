@@ -9,7 +9,7 @@ defmodule Dnctopicapi.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/", from: :dnctopicapi, gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: ~w(css fonts images js favicon.ico robots.txt loaderio-43e2dfe55671340910c9e3c4ab34b98e.txt)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
