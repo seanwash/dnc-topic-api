@@ -39,6 +39,7 @@ defmodule Dnctopicapi.Mixfile do
      {:gettext, "~> 0.11"},
      {:httpoison, "~> 0.10.0"},
      {:quantum, ">= 1.9.0"},
+     {:cors_plug, "~> 1.2"},
      {:cowboy, "~> 1.0"}]
   end
 

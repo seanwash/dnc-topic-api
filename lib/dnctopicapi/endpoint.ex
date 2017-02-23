@@ -38,5 +38,6 @@ defmodule Dnctopicapi.Endpoint do
     key: "_dnctopicapi_key",
     signing_salt: "yJgQ/ozk"
 
+  plug CORSPlug
   plug Dnctopicapi.Router
 end
