@@ -18,18 +18,3 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
-
-## Roadmap
-
-### Podcast
-  * id
-
-### Episode
-  * title
-  * description
-  * audio_url
-  * number
-  * long_description
-  * sharing_url
-  * guid
-  * duration
