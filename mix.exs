@@ -19,7 +19,7 @@ defmodule Dnctopicapi.Mixfile do
   def application do
     [mod: {Dnctopicapi, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :httpoison]]
+                    :phoenix_ecto, :postgrex, :httpoison, :quantum]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,6 +38,7 @@ defmodule Dnctopicapi.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:httpoison, "~> 0.10.0"},
+     {:quantum, ">= 1.9.0"},
      {:cowboy, "~> 1.0"}]
   end
 
