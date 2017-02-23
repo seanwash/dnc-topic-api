@@ -3,7 +3,7 @@ defmodule Dnctopicapi.Simplecast do
 
   alias Dnctopicapi.{Episode, Repo}
 
-  @url "https://api.simplecast.com/v1/podcasts/1386/episodes.json?api_key=***REMOVED***"
+  @url System.get_env("SIMPLECAST_API_URL")
 
   def fetch_episodes do
     case HTTPoison.get(@url) do
