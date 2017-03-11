@@ -22,6 +22,11 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :tzdata, :autoupdate, :disabled
+
+config :quantum,
+  global?: true
+
 config :quantum, :dnctopicapi,
   cron: [
     "@daily": {Dnctopicapi.Simplecast, :fetch_episodes}
