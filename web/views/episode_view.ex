@@ -17,6 +17,9 @@ defmodule Dnctopicapi.EpisodeView do
       guid: episode.guid,
       sharing_url: episode.sharing_url,
       audio_url: episode.audio_url,
-      duration: episode.duration}
+      duration: episode.duration,
+      published_at: episode.published_at,
+      published: episode.published,
+      number: episode.number}
   end
 end

@@ -9,6 +9,9 @@ defmodule Dnctopicapi.Episode do
     field :sharing_url, :string
     field :audio_url, :string
     field :duration, :integer
+    field :published_at, :utc_datetime
+    field :published, :boolean
+    field :number, :integer
 
     timestamps()
   end
@@ -18,12 +21,12 @@ defmodule Dnctopicapi.Episode do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:title, :description, :long_description, :guid, :sharing_url, :audio_url, :duration])
-    |> validate_required([:title, :description, :long_description, :guid, :sharing_url, :audio_url, :duration])
+    |> cast(params, [:title, :description, :long_description, :guid, :sharing_url, :audio_url, :duration, :published_at, :published, :number])
+    |> validate_required([:title, :description, :long_description, :guid, :sharing_url, :audio_url, :duration, :published_at, :published, :number])
   end
 
   def newest_first(query) do
     from e in query,
-    order_by: [asc: e.id]
+    order_by: [desc: e.published_at]
   end
 end
