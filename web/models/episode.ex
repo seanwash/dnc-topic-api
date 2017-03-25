@@ -21,4 +21,9 @@ defmodule Dnctopicapi.Episode do
     |> cast(params, [:title, :description, :long_description, :guid, :sharing_url, :audio_url, :duration])
     |> validate_required([:title, :description, :long_description, :guid, :sharing_url, :audio_url, :duration])
   end
+
+  def newest_first(query) do
+    from e in query,
+    order_by: [asc: e.inserted_at]
+  end
 end

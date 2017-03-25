@@ -4,7 +4,10 @@ defmodule Dnctopicapi.EpisodeController do
   alias Dnctopicapi.Episode
 
   def index(conn, _params) do
-    episodes = Repo.all(Episode)
+    episodes = Episode
+      |> Episode.newest_first
+      |> Repo.all
+
     render(conn, "index.json", episodes: episodes)
   end
 
