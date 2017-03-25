@@ -24,6 +24,6 @@ defmodule Dnctopicapi.Episode do
 
   def newest_first(query) do
     from e in query,
-    order_by: [asc: e.inserted_at]
+    order_by: [asc: e.id]
   end
 end
