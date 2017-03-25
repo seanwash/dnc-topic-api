@@ -3,7 +3,7 @@ defmodule Dnctopicapi.Simplecast do
 
   alias Dnctopicapi.{Episode, Repo}
 
-  @url System.get_env("SIMPLECAST_API_URL")
+  @url System.get_env("SIMPLECAST_API_URL") || Application.get_env(:dnctopicapi, :simplecast_api_url)
 
   def fetch_episodes do
     case HTTPoison.get(@url) do
